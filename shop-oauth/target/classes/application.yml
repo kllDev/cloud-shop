@@ -1,9 +1,11 @@
 server:
-  port: 1203
+  port: 8001
 
 spring:
   application:
-    name: eshop-auth
+    name: shop-oauth
+  main:
+    allow-bean-definition-overriding: true
   redis:
     password: 111111
     cluster:
@@ -43,6 +45,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:1111/eureka/
+#消费者将要去访问的微服务名称（注册成功进nacos的微服务提供者）
+service-url:
+  nacos-user-service: http://userService-provider
 
 mybatis:
   type-aliases-package: com.curise.eshop.common.entity

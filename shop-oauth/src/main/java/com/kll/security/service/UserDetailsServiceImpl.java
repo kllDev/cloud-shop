@@ -1,7 +1,7 @@
 package com.kll.security.service;
 
 import com.kll.entities.User;
-import com.kll.security.dao.UserRepository;
+import com.kll.security.dao.UserDetailsRepository;
 import com.kll.security.jwt.JwtUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
-    private UserRepository userRepository;
+    private UserDetailsRepository userRepository;
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {

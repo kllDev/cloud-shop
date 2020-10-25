@@ -1,7 +1,7 @@
 package com.kll.security.controller;
 
 import com.kll.entities.User;
-import com.kll.security.dao.UserRepository;
+import com.kll.security.dao.UserDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +17,7 @@ public class UserController {
 
     // 为了减少篇幅就不写service接口了
     @Autowired
-    private UserRepository userRepository;
+    private UserDetailsRepository userRepository;
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;

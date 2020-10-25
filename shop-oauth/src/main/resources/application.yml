@@ -4,7 +4,8 @@ server:
 spring:
   application:
     name: shop-oauth
-
+  main:
+    allow-bean-definition-overriding: true
   redis:
     password: 111111
     cluster:
